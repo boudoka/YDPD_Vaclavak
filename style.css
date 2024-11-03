@@ -1,0 +1,150 @@
+body,
+html {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  display: flex;
+}
+
+.bg-image {
+  background-image: url("images/glass.png");
+  filter: blur(10px);
+  -webkit-filter: blur(10px);
+
+  /* Full height and fixed position */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+/* Divide body into left and right sections */
+.left-part,
+.right-part {
+  height: 100%;
+  z-index: 1; /* Ensures these are above the background */
+  position: relative;
+  flex-direction: column;
+  display: flex;
+}
+
+.left-part {
+  width: 60%;
+  padding: 20px;
+}
+
+.right-part {
+  width: 40%;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex: 1;
+  max-height: 80vh; 
+}
+
+/* Map container style */
+#map {
+  width: 100%;
+  height: 100%; 
+  max-height: 650px; 
+  border: 1px solid #ccc; 
+}
+
+/* Image slider styles */
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  /* background-color: grey; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slides {
+  position: relative;
+  width: 90%;
+  height: 90%;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+  /* Smooth transition for opacity */
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensure images cover the area without distorting */
+}
+
+.caption {
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  font-weight: bold;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(71, 71, 71);
+  /* Semi-transparent background */
+  text-align: center;
+  padding: 0px;
+  opacity: 0;
+  transition: opacity 0.7s ease;
+  /* text-shadow: 
+    -1px -1px 0 black,  
+    1px -1px 0 black,
+    -1px 1px 0 black,
+    1px 1px 0 black; */
+}
+
+/* Show caption for the active image */
+.slide.active .caption {
+  opacity: 1;
+  /* Show caption for the active image */
+}
+
+.slide.active {
+  opacity: 1;
+  /* Show the active slide */
+}
+
+/* Position indicators (dots) */
+.dots {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+}
+
+.dots span {
+  cursor: pointer;
+  height: 10px;
+  width: 10px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.dots .active {
+  background-color: #717171;
+}

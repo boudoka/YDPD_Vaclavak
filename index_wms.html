@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="initial-scale=1, user-scalable=no, maximum-scale=1, width=device-width">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="stylesheet" href="css/leaflet.css">
+  <link rel="stylesheet" href="css/fontawesome-all.min.css">
+  <link rel="stylesheet" href="css/leaflet-measure.css">
+  <link rel="icon" href="https://1001freedownloads.s3.amazonaws.com/vector/thumb/67683/oldtownf.png" />
+  <link rel="stylesheet" href="style.css">
+  <title>Objekt čp. 47</title>
+</head>
+
+<body>
+  <!-- Background Image Div -->
+  <div class="bg-image"></div>
+
+  <!-- Main Content -->
+  <div class="left-part">
+    <h2>Václavské náměstí 2132/47, Praha - Nové Město.</h2>
+    <div class="map-container">
+      <div id="map" class="leaflet-container"></div>
+    </div>
+
+    <script src="js/leaflet.js"></script>
+    <script src="js/leaflet.rotatedMarker.js"></script>
+    <script src="js/leaflet.wms.js"></script>
+    <script src="js/proj4.js"></script>
+    <script src="js/proj4leaflet.js"></script>
+    <script src="js/leaflet-measure.js"></script>
+    <script src="js/qgis2web_expressions.js"></script>
+    <script src="data/727181HP_3.js"></script>
+    <script src="mapa_wms.js"></script>
+  </div>
+
+  <div class="right-part">
+    <div class="slider">
+      <div class="slides">
+        <div class="slide">
+          <img src="HisPodklady/Pohled_1922.jpg" alt="Image 1">
+          <div class="caption">1922</div>
+        </div>
+        <div class="slide">
+          <img src="HisPodklady/Pohled_1960.jpg" alt="Image 2">
+          <div class="caption">1960</div>
+        </div>
+        <div class="slide">
+          <img src="HisPodklady/Pohled_1961.jpg" alt="Image 3">
+          <div class="caption">1961</div>
+        </div>
+        <div class="slide">
+          <img src="HisPodklady/Pohled_1989.jpg" alt="Image 4">
+          <div class="caption">1989</div>
+        </div>
+        <div class="slide">
+          <img src="HisPodklady/Pohled_2022.jpg" alt="Image 5">
+          <div class="caption">2022</div>
+        </div>
+      </div>
+      <div class="dots">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+      </div>
+    </div>
+    <script src="slider.js"></script>
+  </div>
+</body>
+</html>
